@@ -37,7 +37,7 @@ namespace WeatherAPI.Controllers
                 string[] cityarr = value.Split(',');
                 HttpResponseMessage response = new HttpResponseMessage();
                 int i = 0;
-                while (i <= 1)
+                while (i <= cityarr.Length-1)
                 {
                     var urlloc = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityarr[i] + APIKey;
 
